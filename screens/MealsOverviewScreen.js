@@ -9,9 +9,16 @@ function MealsOverviewScreen({ route }) {
     return mealItem.categoryIds.indexOf(catId) >= 0;
   });
   function renderMealItem(itemData) {
+    const mealItemProps = {
+      title: itemData.item.title,
+      imageUrl: itemData.item.imageUrl,
+      duration: itemData.item.duration,
+      complexity: itemData.item.complexity,
+      affordable: itemData.item.affordability,
+    };
     return (
       <View>
-        <MealItem title={itemData.item.title} />
+        <MealItem {...mealItemProps} />
       </View>
     );
   }
