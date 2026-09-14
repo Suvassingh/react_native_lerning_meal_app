@@ -7,6 +7,7 @@ import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MealsOverviewScreen from "./screens/MealsOverviewScreen";
+import MealDetailScreen from "./screens/MealDetailsScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,13 +34,36 @@ export default function App() {
     <>
       <StatusBar style="light" />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="MealsCategory">
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: "#432525",
+            },
+            headerTintColor: "white",
+            contentStyle: {
+              backgroundColor: "#4b4545",
+            },
+          }}
+          initialRouteName="MealsCategory"
+        >
           <Stack.Screen
             name="MealsCategory"
             component={CategoryScreen}
-            options={{ title: "Meals Categories" }}
+            options={{
+              title: "Meals Categories",
+            }}
           />
-          <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} />
+          <Stack.Screen
+            name="MealsOverview"
+            component={MealsOverviewScreen}
+            // options={({ router, navigation }) => {
+            //   const catId = router.params.categoryId;
+            //   return {
+            //     title: catId,
+            //   };
+            // }}
+          />
+          <Stack.Screen name="MealDetailScreen" component={MealDetailScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
