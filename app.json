@@ -4,8 +4,8 @@
     "slug": "meal_app",
     "version": "1.0.0",
     "orientation": "portrait",
+    "backgroundColor": "#24180f",
     "icon": "./assets/images/icon.png",
-    "scheme": "mealapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -22,11 +22,9 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
       [
         "expo-splash-screen",
         {
@@ -39,14 +37,7 @@
           }
         }
       ],
-      "expo-font",
-      "expo-image",
-      "expo-status-bar",
-      "expo-web-browser"
-    ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
-    }
+      "expo-font"
+    ]
   }
 }
