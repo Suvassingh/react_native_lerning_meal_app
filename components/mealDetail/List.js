@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#584f4f",
   },
   itemtext: {
-    color: "#432525",
+    color: "#e8dfdf",
     textAlign: "center",
   },
 });

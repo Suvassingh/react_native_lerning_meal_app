@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
     marginVertical: 4,
   },
   subTitle: {
-    color: "#584f4f",
+    color: "#edb5b5",
     fontFamily: "open-sans-bold",
-
+fontSize:24,
     textAlign: "center",
   },
 });
