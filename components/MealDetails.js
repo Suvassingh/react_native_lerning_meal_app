@@ -1,19 +1,20 @@
+import { View, Text, StyleSheet } from "react-native";
 
-import {View,Text,StyleSheet} from 'react-native'
-
-
-function MealDetails({duration,complexity,affordable}){
-    return<View style={styles.details}>
-              <Text style={styles.detailItem}>{duration}</Text>
-              <Text style={styles.detailItem}>{complexity.toUpperCase()}</Text>
-              <Text style={styles.detailItem}>{affordable.toUpperCase()}</Text>
-            </View>
-
+function MealDetails({ duration, complexity, affordable, style, textStyle }) {
+  return (
+    <View style={[styles.details, style]}>
+      <Text style={[styles.detailItem, textStyle]}>{duration}</Text>
+      <Text style={[styles.detailItem, textStyle]}>
+        {complexity.toUpperCase()}
+      </Text>
+      <Text style={[styles.detailItem, textStyle]}>
+        {affordable.toUpperCase()}
+      </Text>
+    </View>
+  );
 }
 
-
 export default MealDetails;
-
 
 const styles = StyleSheet.create({
   details: {
